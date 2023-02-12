@@ -44,11 +44,6 @@ func isLocal(t *bool, articleID *string, parentID *string, userName *string, con
 		return false, fmt.Errorf("ローカル実行だが記事ID指定が無いので処理不可能")
 	}
 
-	if *parentID == "" {
-		fmt.Println("no exec")
-		return false, fmt.Errorf("ローカル実行だが返信元コメントID指定が無いので処理不可能")
-	}
-
 	if *userName == "" {
 		fmt.Println("no exec")
 		return false, fmt.Errorf("ローカル実行だが表示名指定が無いので処理不可能")

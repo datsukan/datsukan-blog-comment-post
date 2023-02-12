@@ -15,10 +15,6 @@ func (r *PostRequest) Validate() error {
 		return fmt.Errorf("article_id is empty")
 	}
 
-	if r.ParentID == "" {
-		return fmt.Errorf("parent_id is empty")
-	}
-
 	if r.UserName == "" {
 		return fmt.Errorf("user_name is empty")
 	}
