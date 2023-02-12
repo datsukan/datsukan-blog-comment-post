@@ -5,9 +5,9 @@ services:
     image: amazon/dynamodb-local:latest
     container_name: dynamodb_local
     user: root
-    command: -jar DynamoDBLocal.jar -sharedDb -dbPath /data  # 永続化するデータのファイルパス
+    command: -jar DynamoDBLocal.jar -sharedDb -dbPath /data
     volumes:
-      - ./dynamodb_data:/data  # データの永続化
+      - ./dynamodb_data:/data
     ports:
       - 8000:8000
 
